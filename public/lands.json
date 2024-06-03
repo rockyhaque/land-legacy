@@ -1,0 +1,147 @@
+[
+    {
+      "id": 1,
+      "segment_name": "Agricultural",
+      "title": "Sunny Fields Farm",
+      "image": "https://i.ibb.co/mG12x4P/chris-ensminger-y-JDZTDe-He-G8-unsplash.jpg",
+      "description": "A beautiful piece of agricultural land perfect for various types of farming. Rich soil and plenty of sunlight make this an ideal location.",
+      "price": "500,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "California, USA",
+      "facilities": ["Living room", "Swimming pool", "Kitchen"],
+      "additional_info": {
+        "water_source": "Irrigation system",
+        "soil_type": "Loamy"
+      }
+    },
+    {
+      "id": 2,
+      "segment_name": "Vineyards",
+      "title": "Napa Valley Vineyard",
+      "image": "https://i.ibb.co/nbMjLZs/tim-mossholder-b-Rw46-I773-E4-unsplash.jpg",
+      "description": "Premium vineyard located in Napa Valley. Known for producing top-quality wines. Scenic views and perfect climate for grape growing.",
+      "price": "1,200,000",
+      "status": "sale",
+      "area": "300 sq ft",
+      "location": "Napa Valley, California, USA",
+      "facilities": ["Living room", "Swimming pool", "Kitchen"],
+      "additional_info": {
+        "grape_varieties": ["Cabernet Sauvignon", "Merlot"],
+        "annual_production": "50,000 bottles"
+      }
+    },
+    {
+      "id": 3,
+      "segment_name": "Plantations",
+      "title": "Tropical Palm Plantation",
+      "image": "https://i.ibb.co/Y3v3NBm/dan-meyers-0-Agt-Po-AARt-E-unsplash.jpg",
+      "description": "Large tropical plantation ideal for palm oil production. Fertile land with ample rainfall.",
+      "price": "800,000",
+      "status": "rent",
+      "area": "4000 sq ft",
+      "location": "Indonesia",
+      "facilities": ["Living room", "Swimming pool", "Kitchen"],
+      "additional_info": {
+        "crop": "Palm oil",
+        "harvest_frequency": "Bi-annual"
+      }
+    },
+    {
+      "id": 4,
+      "segment_name": "Ranches",
+      "title": "Texas Cattle Ranch",
+      "image": "https://i.ibb.co/MMt5hhz/stijn-te-strake-Udhpcf-Im-Q9-Y-unsplash.jpg",
+      "description": "Expansive cattle ranch with modern facilities. Perfect for livestock rearing and grazing.",
+      "price": "900,000",
+      "status": "sale",
+      "area": "1000 sq ft",
+      "location": "Texas, USA",
+      "facilities": ["Living room", "Swimming pool", "Kitchen"],
+      "additional_info": {
+        "livestock_capacity": "500 cattle",
+        "barns": "3 large barns"
+      }
+    },
+    {
+      "id": 5,
+      "segment_name": "Desert",
+      "title": "Sahara Desert Retreat",
+      "image": "https://i.ibb.co/19zn7T0/gilberto-olimpio-VCVNddng5vo-unsplash.jpg",
+      "description": "A unique desert land ideal for tourism or solar energy projects. Vast open space with beautiful dunes.",
+      "price": "300,000",
+      "status": "rent",
+      "area": "2000 sq ft",
+      "location": "Sahara Desert, Morocco",
+      "facilities": ["Living room", "Swimming pool", "Kitchen"],
+      "additional_info": {
+        "potential_uses": ["Tourism", "Solar energy"],
+        "climate": "Arid"
+      }
+    },
+    {
+      "id": 6,
+      "segment_name": "Urban",
+      "title": "City Center Plot",
+      "image": "https://i.ibb.co/DpfRby3/mark-pisek-j-GBa-N-x-Q5s-U-unsplash.jpg",
+      "description": "Prime urban land located in the heart of the city. Ideal for commercial or residential development.",
+      "price": "2,000,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "New York, USA",
+      "facilities": ["Living room", "Swimming pool", "Kitchen"],
+      "additional_info": {
+        "zoning": "Commercial",
+        "transport_links": "Excellent"
+      }
+    },
+    {
+      "id": 7,
+      "segment_name": "Coastal",
+      "title": "Beachfront Paradise",
+      "image": "https://i.ibb.co/M1JMTYk/colin-watts-s-Bxe6-Ytwcyc-unsplash.jpg",
+      "description": "Stunning coastal land with direct beach access. Perfect for resort development or private residence.",
+      "price": "1,500,000",
+      "status": "sale",
+      "area": "1000 sq ft",
+      "location": "Malibu, California, USA",
+      "facilities": ["Living room", "Swimming pool", "Kitchen"],
+      "additional_info": {
+        "shoreline_length": "500 meters",
+        "water_activities": ["Swimming", "Surfing"]
+      }
+    },
+    {
+      "id": 8,
+      "segment_name": "Mining",
+      "title": "Rich Mineral Land",
+      "image": "https://i.ibb.co/8xj6ZTc/artyom-korshunov-NWByxw-VN-J0-unsplash.jpg",
+      "description": "Land rich in mineral resources. Ideal for mining operations with proven reserves of valuable minerals.",
+      "price": "3,000,000",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "Western Australia",
+      "facilities": ["Living room", "Swimming pool", "Kitchen"],
+      "additional_info": {
+        "minerals": ["Gold", "Iron ore"],
+        "mining_permits": "Available"
+      }
+    },
+    {
+      "id": 9,
+      "segment_name": "Wetland",
+      "title": "Everglades Wetland Reserve",
+      "image": "https://i.ibb.co/d0FXMtF/dave-hoefler-hq-UYUC-ZY8-unsplash.jpg",
+      "description": "Protected wetland area with rich biodiversity. Suitable for conservation projects and eco-tourism.",
+      "price": "600,000",
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "Florida, USA",
+      "facilities": ["Living room", "Swimming pool", "Kitchen"],
+      "additional_info": {
+        "ecosystem": "Wetland",
+        "wildlife": ["Birds", "Reptiles"]
+      }
+    }
+  ]
+  
