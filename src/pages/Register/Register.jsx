@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaGithub } from "react-icons/fa";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
   const [error, setError] = useState("");
 
+  const { createUser, setUser, googleLogin } = useContext(AuthContext);
+
+  // react hook form
   const {
     register,
     handleSubmit,
@@ -17,7 +21,26 @@ const Register = () => {
 
   const onSubmit = (data) => {
     const { email, name, password, photoURL } = data;
+
+    // create user in firebase
+    createUser(email, password)
+      .then((result) => {
+        setUser(result.user);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+    .then((result) => {
+      setUser(result.user);
+    })
+    .catch((error) => {
+      setError(error.message);
+    });
+  }
 
   return (
     <section className="bg-gray-100 min-h-[calc(100vh-284px)] flex box-border justify-center items-center">
@@ -110,21 +133,21 @@ const Register = () => {
                 </span>
               )}
               {errors.password?.type === "minLength" && (
-                  <span className="text-red-500 text-sm mt-2">
-                    Password Must be 6 characters
-                  </span>
-                )}
-                {errors.password?.type === "maxLength" && (
-                  <span className="text-red-500 text-sm mt-2">
-                    Password Must be less than 20 characters
-                  </span>
-                )}
-                {errors.password?.type === "pattern" && (
-                  <span className="text-red-500 text-sm mt-2">
-                    Password must have one Uppercase one lower case, one number
-                    and one special character.
-                  </span>
-                )}
+                <span className="text-red-500 text-sm mt-2">
+                  Password Must be 6 characters
+                </span>
+              )}
+              {errors.password?.type === "maxLength" && (
+                <span className="text-red-500 text-sm mt-2">
+                  Password Must be less than 20 characters
+                </span>
+              )}
+              {errors.password?.type === "pattern" && (
+                <span className="text-red-500 text-sm mt-2">
+                  Password must have one Uppercase one lower case, one number
+                  and one special character.
+                </span>
+              )}
             </div>
 
             <button
@@ -134,12 +157,18 @@ const Register = () => {
               Register
             </button>
           </form>
+          <div className="mt-2">
+            {error && (
+              <small className="text-red-500 font-bold">*{error}</small>
+            )}
+          </div>
+
           <div className="mt-6  items-center text-gray-100">
             <hr className="border-gray-300" />
             <p className="text-center text-sm text-gray-500">OR</p>
             <hr className="border-gray-300" />
           </div>
-          <button className="bg-white border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
+          <button onClick={handleGoogleLogin} className="bg-white border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
             <svg
               className="mr-3"
               xmlns="http://www.w3.org/2000/svg"

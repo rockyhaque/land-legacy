@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaGithub } from "react-icons/fa";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
   const [error, setError] = useState("");
+
+  const { loginUser, setUser, googleLogin } = useContext(AuthContext);
 
   const {
     register,
@@ -16,8 +19,27 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const { email, name, password, photoURL } = data;
+    const { email,  password } = data;
+
+    loginUser(email, password)
+      .then((result) => {
+        setUser(result.user);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        setUser(result.user);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+
   return (
     <section className="bg-gray-100 min-h-[calc(100vh-284px)] flex box-border justify-center items-center">
       <div className="bg-customSkyBlue rounded-2xl flex max-w-3xl p-5 items-center">
@@ -41,20 +63,6 @@ const Login = () => {
             <div className="flex flex-col">
               <input
                 className="p-2 mt-8 rounded-xl border"
-                type="text"
-                name="name"
-                placeholder="Name"
-                {...register("name", { required: true })}
-              />
-              {errors.name && (
-                <span className="text-red-500 text-sm mt-1">
-                  *Name is required
-                </span>
-              )}
-            </div>
-            <div className="flex flex-col">
-              <input
-                className="p-2  rounded-xl border"
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -66,20 +74,7 @@ const Login = () => {
                 </span>
               )}
             </div>
-            <div className="flex flex-col">
-              <input
-                className="p-2 rounded-xl border"
-                type="text"
-                name="photoURL"
-                placeholder="Photo URL"
-                {...register("photoURL", { required: true })}
-              />
-              {errors.photoURL && (
-                <span className="text-red-500 text-sm mt-1">
-                  *Photo URL is required
-                </span>
-              )}
-            </div>
+
             <div>
               <div className="relative flex items-center">
                 <input
@@ -133,12 +128,20 @@ const Login = () => {
               Login
             </button>
           </form>
+          <div className="mt-2">
+            {error && (
+              <small className="text-red-500 font-bold">*{error}</small>
+            )}
+          </div>
           <div className="mt-6  items-center text-gray-100">
             <hr className="border-gray-300" />
             <p className="text-center text-sm text-gray-500">OR</p>
             <hr className="border-gray-300" />
           </div>
-          <button className="bg-white border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
+          <button
+            onClick={handleGoogleLogin}
+            className="bg-white border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium"
+          >
             <svg
               className="mr-3"
               xmlns="http://www.w3.org/2000/svg"

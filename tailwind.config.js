@@ -11,6 +11,9 @@ export default {
         customSkyBlue: '#EDF9F9',  
         customDeepBlue: '#002D74',  
       },
+      fontFamily: {
+        customRaleway: ['"Raleway"', "sans-serif"],
+      },
     },
   },
   plugins: [
