@@ -10,6 +10,7 @@ export default {
         customGreen: '#1F4B43', 
         customSkyBlue: '#EDF9F9',  
         customDeepBlue: '#002D74',  
+        customTeal: '#01bf93'  
       },
       fontFamily: {
         customRaleway: ['"Raleway"', "sans-serif"],
