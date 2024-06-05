@@ -19,10 +19,10 @@ const Land = ({ land }) => {
     <div>
       <div className="card glass">
         <figure>
-          <img className="h-64" src={image} alt="lands" />
+          <img className="h-64 w-full object-cover" src={image} alt="lands" />
         </figure>
         <div className="px-4">
-          <div className="flex items-center gap-3 mt-2">
+          <div className="flex items-center gap-3 mt-4">
             <IoLocationOutline />
             <p>{location}</p>
           </div>
@@ -31,7 +31,7 @@ const Land = ({ land }) => {
             {description.length > 50 ? (
               <p>
                 {description.slice(0, 50)}...{" "}
-                <Link className="text-sky-600 font-semibold ml-2">
+                <Link to={`/land/${id}`} className="text-sky-600 font-semibold ml-2">
                   Read More...
                 </Link>
               </p>
@@ -52,7 +52,7 @@ const Land = ({ land }) => {
             </div>
           </div>
           <div className="text-center mt-6 mb-6">
-            <Link className="btn btn-md bg-customTeal border-0 font-semibold">View Property</Link>
+            <Link to={`/land/${id}`} className="btn btn-md bg-customTeal border-0 font-semibold">View Property</Link>
           </div>
         </div>
       </div>

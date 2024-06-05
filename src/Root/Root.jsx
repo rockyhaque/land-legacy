@@ -6,7 +6,9 @@ const Root = () => {
   return (
     <div className="font-customRaleway">
       <Navbar></Navbar>
+      
       <Outlet></Outlet>
+      
       <Footer></Footer>
     </div>
   );
