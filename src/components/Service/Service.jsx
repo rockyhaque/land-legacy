@@ -4,7 +4,7 @@ import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 const Service = () => {
   return (
-    <div className="flex flex-col md:flex-row lg:flex-row py-20 px-10 md:px-2 lg:px-0">
+    <div className="flex flex-col md:flex-row lg:flex-row py-20 px-10 md:px-2 lg:px-0 gap-10">
       <div className="w-full md:w-1/2 lg:w-1/2">
         <div className="space-y-4">
           <h6 className="uppercase text-customTeal text-sm font-semibold">
@@ -57,13 +57,13 @@ const Service = () => {
         </div>
       </div>
       <div className="w-full md:w-1/2 lg:w-1/2">
-        <div>
+
           <img
             className="rounded-2xl mt-8 md:mt-0 lg:mt-0"
             src="https://i.ibb.co/D4RJMth/jaime-spaniol-LLXh-Vpp-SMe-A-unsplash.jpg"
             alt=""
           />
-        </div>
+
         
       </div>
     </div>

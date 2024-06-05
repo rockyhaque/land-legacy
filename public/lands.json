@@ -7,7 +7,7 @@
       "description": "A beautiful piece of agricultural land perfect for various types of farming. Rich soil and plenty of sunlight make this an ideal location.",
       "price": "500,000",
       "status": "sale",
-      "area": "5000 sq ft",
+      "area": "5000",
       "location": "California, USA",
       "facilities": ["Living room", "Swimming pool", "Kitchen"],
       "additional_info": {
@@ -23,7 +23,7 @@
       "description": "Premium vineyard located in Napa Valley. Known for producing top-quality wines. Scenic views and perfect climate for grape growing.",
       "price": "1,200,000",
       "status": "sale",
-      "area": "300 sq ft",
+      "area": "3000",
       "location": "Napa Valley, California, USA",
       "facilities": ["Living room", "Swimming pool", "Kitchen"],
       "additional_info": {
@@ -39,7 +39,7 @@
       "description": "Large tropical plantation ideal for palm oil production. Fertile land with ample rainfall.",
       "price": "800,000",
       "status": "rent",
-      "area": "4000 sq ft",
+      "area": "4000",
       "location": "Indonesia",
       "facilities": ["Living room", "Swimming pool", "Kitchen"],
       "additional_info": {
@@ -55,7 +55,7 @@
       "description": "Expansive cattle ranch with modern facilities. Perfect for livestock rearing and grazing.",
       "price": "900,000",
       "status": "sale",
-      "area": "1000 sq ft",
+      "area": "1000",
       "location": "Texas, USA",
       "facilities": ["Living room", "Swimming pool", "Kitchen"],
       "additional_info": {
@@ -71,7 +71,7 @@
       "description": "A unique desert land ideal for tourism or solar energy projects. Vast open space with beautiful dunes.",
       "price": "300,000",
       "status": "rent",
-      "area": "2000 sq ft",
+      "area": "2000",
       "location": "Sahara Desert, Morocco",
       "facilities": ["Living room", "Swimming pool", "Kitchen"],
       "additional_info": {
@@ -87,7 +87,7 @@
       "description": "Prime urban land located in the heart of the city. Ideal for commercial or residential development.",
       "price": "2,000,000",
       "status": "sale",
-      "area": "5000 sq ft",
+      "area": "5000",
       "location": "New York, USA",
       "facilities": ["Living room", "Swimming pool", "Kitchen"],
       "additional_info": {
@@ -103,7 +103,7 @@
       "description": "Stunning coastal land with direct beach access. Perfect for resort development or private residence.",
       "price": "1,500,000",
       "status": "sale",
-      "area": "1000 sq ft",
+      "area": "1000",
       "location": "Malibu, California, USA",
       "facilities": ["Living room", "Swimming pool", "Kitchen"],
       "additional_info": {
@@ -119,7 +119,7 @@
       "description": "Land rich in mineral resources. Ideal for mining operations with proven reserves of valuable minerals.",
       "price": "3,000,000",
       "status": "rent",
-      "area": "1500 sq ft",
+      "area": "1500",
       "location": "Western Australia",
       "facilities": ["Living room", "Swimming pool", "Kitchen"],
       "additional_info": {
@@ -135,7 +135,7 @@
       "description": "Protected wetland area with rich biodiversity. Suitable for conservation projects and eco-tourism.",
       "price": "600,000",
       "status": "sale",
-      "area": "2000 sq ft",
+      "area": "2000",
       "location": "Florida, USA",
       "facilities": ["Living room", "Swimming pool", "Kitchen"],
       "additional_info": {
