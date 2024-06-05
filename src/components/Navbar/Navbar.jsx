@@ -4,7 +4,6 @@ import { useContext } from "react";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
-  console.log(user);
 
   const handleLogout = () => {
     logout()
@@ -21,15 +20,27 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
-        <NavLink to="/login">Login</NavLink>
-      </li>
-      <li>
-        <NavLink to="/register">Register</NavLink>
-      </li>
-      <li>
-        <NavLink to="/contact">Contact Us</NavLink>
-      </li>
+      {
+        !user && (<li>
+          <NavLink to="/login">Login</NavLink>
+        </li>)
+      }
+      {
+        !user && (<li>
+          <NavLink to="/register">Register</NavLink>
+        </li>)
+      }
+      {user && (
+        <li>
+          <NavLink to="/contact">Contact Us</NavLink>
+        </li>
+      )}
+      {
+        user && (<li>
+          <NavLink to="/updateProfile">Update Profile</NavLink>
+        </li>)
+      }
+
     </>
   );
   return (

@@ -38,7 +38,6 @@ const LandDetails = () => {
     location,
     segment_name,
     facilities,
-    additional_info,
   } = land;
 
   return (
@@ -142,42 +141,10 @@ const LandDetails = () => {
                 </ul>
               </div>
             </div>
-            <div className="border border-gray-300 rounded-2xl p-6 w-full mt-4">
-              {additional_info && (
-                <div className="mt-4">
-                  <h3 className="text-lg font-semibold">
-                    Additional Information
-                  </h3>
-                  <ul className="list-disc list-inside mt-2">
-                    {additional_info.minerals && (
-                      <li>
-                        <strong>Minerals:</strong>{" "}
-                        {additional_info.minerals.join(", ")}
-                      </li>
-                    )}
-                    {additional_info.mining_permits && (
-                      <li>
-                        <strong>Mining Permits:</strong>{" "}
-                        {additional_info.mining_permits}
-                      </li>
-                    )}
-                    {additional_info.shoreline_length && (
-                      <li>
-                        <strong>Shoreline Length:</strong>{" "}
-                        {additional_info.shoreline_length}
-                      </li>
-                    )}
-                    {additional_info.water_activities && (
-                      <li>
-                        <strong>Water Activities:</strong>{" "}
-                        {additional_info.water_activities.join(", ")}
-                      </li>
-                    )}
-                  </ul>
-                </div>
-              )}
-            </div>
             
+            <div className="text-center mt-10">
+              <button className="btn btn-wide bg-customTeal text-white font-semibold text-lg">Buy Property</button>
+            </div>
           </div>
         </div>
       </div>

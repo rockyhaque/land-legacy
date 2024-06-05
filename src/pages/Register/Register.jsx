@@ -3,15 +3,16 @@ import { useForm } from "react-hook-form";
 import { FaGithub } from "react-icons/fa";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Helmet } from "react-helmet";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const { createUser, setUser, googleLogin } = useContext(AuthContext);
+  const { createUser, setUser, googleLogin, githubLogin } = useContext(AuthContext);
 
   // react hook form
   const {
@@ -27,6 +28,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         setUser(result.user);
+        navigate("/");
       })
       .catch((error) => {
         setError(error.message);
@@ -37,11 +39,25 @@ const Register = () => {
     googleLogin()
     .then((result) => {
       setUser(result.user);
+      navigate("/");
     })
     .catch((error) => {
       setError(error.message);
     });
   }
+
+  const handleGithubLogin = () => {
+    githubLogin()
+    .then((result) => {
+      setUser(result.user);
+      navigate("/");
+    })
+    .catch((error) => {
+      setError(error.message);
+    });
+  }
+
+
 
   return (
     <section className="bg-gray-100 min-h-[calc(100vh-284px)] flex box-border justify-center items-center">
@@ -198,7 +214,7 @@ const Register = () => {
             </svg>
             Login with Google
           </button>
-          <button className="bg-white border py-2 w-full rounded-xl mt-3 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
+          <button onClick={handleGithubLogin} className="bg-white border py-2 w-full rounded-xl mt-3 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
             <FaGithub className="text-xl mr-3" />
             <span>Login with Github</span>
           </button>

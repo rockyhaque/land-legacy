@@ -6,6 +6,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import LandDetails from "../pages/LandDetails/LandDetails";
 import Contact from "../pages/Contact/Contact";
+import PrivateRoute from "./PrivateRoute";
+import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 
 export const router = createBrowserRouter([
     {
@@ -28,11 +30,15 @@ export const router = createBrowserRouter([
         },
         {
           path: "/contact",
-          element: <Contact></Contact>
+          element: <PrivateRoute><Contact></Contact></PrivateRoute>
         },
         {
           path: "/land/:id",
-          element: <LandDetails></LandDetails>
+          element: <PrivateRoute><LandDetails></LandDetails></PrivateRoute>
+        },
+        {
+          path: "updateProfile",
+          element: <UpdateProfile></UpdateProfile>
         }
       ]
     },
