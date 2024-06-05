@@ -5,6 +5,7 @@ import { IoEyeOffOutline } from "react-icons/io5";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
@@ -44,6 +45,9 @@ const Register = () => {
 
   return (
     <section className="bg-gray-100 min-h-[calc(100vh-284px)] flex box-border justify-center items-center">
+      <Helmet>
+        <title>Land Legacy | Register</title>
+      </Helmet>
       <div className="bg-customSkyBlue rounded-2xl flex max-w-3xl p-5 items-center">
         <div className="md:block hidden w-1/2">
           <img

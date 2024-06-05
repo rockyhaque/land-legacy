@@ -5,6 +5,7 @@ import { IoEyeOffOutline } from "react-icons/io5";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
@@ -19,7 +20,7 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const { email,  password } = data;
+    const { email, password } = data;
 
     loginUser(email, password)
       .then((result) => {
@@ -42,14 +43,10 @@ const Login = () => {
 
   return (
     <section className="bg-gray-100 min-h-[calc(100vh-284px)] flex box-border justify-center items-center">
+      <Helmet>
+        <title>Land Legacy | Login</title>
+      </Helmet>
       <div className="bg-customSkyBlue rounded-2xl flex max-w-3xl p-5 items-center">
-        <div className="md:block hidden w-1/2">
-          <img
-            className="rounded-2xl max-h-[1600px]"
-            src="https://i.ibb.co/WHnDW8Y/aron-yigin-v-Db-I6-Ec-Alo-unsplash.jpg"
-            alt="register form image"
-          />
-        </div>
         <div className="md:w-1/2 px-8">
           <h2 className="font-bold text-3xl text-customDeepBlue">Login</h2>
           <p className="text-sm mt-4 text-customDeepBlue">
@@ -183,6 +180,13 @@ const Login = () => {
               Register
             </Link>
           </div>
+        </div>
+        <div className="md:block hidden w-1/2">
+          <img
+            className="rounded-2xl max-h-[1600px]"
+            src="https://i.ibb.co/4JJXFVn/derek-liang-u-Jfl-Vn6-KG-c-unsplash.jpg"
+            alt="register form image"
+          />
         </div>
       </div>
     </section>

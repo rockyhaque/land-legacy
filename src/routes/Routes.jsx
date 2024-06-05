@@ -5,6 +5,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import LandDetails from "../pages/LandDetails/LandDetails";
+import Contact from "../pages/Contact/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
         {
           path: "/register",
           element: <Register></Register>
+        },
+        {
+          path: "/contact",
+          element: <Contact></Contact>
         },
         {
           path: "/land/:id",

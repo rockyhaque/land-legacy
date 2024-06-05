@@ -3,6 +3,7 @@ import BannerSwiper from "../../components/BannerSwiper/BannerSwiper";
 import Service from "../../components/Service/Service";
 import Speciality from "../../components/Speciality/Speciality";
 import Land from "../../components/Land/Land";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const lands = useLoaderData();
@@ -12,6 +13,9 @@ const Home = () => {
       <BannerSwiper></BannerSwiper>
       {/* Lands Cards */}
       <section className="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 pb-10">
+      <Helmet>
+        <title>Land Legacy | Home</title>
+      </Helmet>
         <div className="text-center space-y-3 py-16">
           <h5 className="text-customTeal font-semibold text-xl">Lands For You</h5>
           <h2 className="font-semibold text-3xl">Choose Your Dream Land</h2>

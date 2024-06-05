@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { BiCategoryAlt } from "react-icons/bi";
 import { IoExpandOutline } from "react-icons/io5";
 import { RiPriceTag3Line } from "react-icons/ri";
@@ -42,6 +43,10 @@ const LandDetails = () => {
 
   return (
     <section className="bg-gradient-to-r from-stone-50 to-teal-50 py-16">
+      <Helmet>
+        <title>Details | {title}</title>
+      </Helmet>
+
       <div className="container mx-auto">
         {/* Details Heading */}
         <div className="text-center space-y-3">
@@ -172,6 +177,7 @@ const LandDetails = () => {
                 </div>
               )}
             </div>
+            
           </div>
         </div>
       </div>
