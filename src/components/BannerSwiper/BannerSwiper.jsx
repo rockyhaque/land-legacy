@@ -41,8 +41,8 @@ const BannerSwiper = () => {
             <img src="https://i.ibb.co/FXkG0bD/ricardo-gomez-angel-F2i-CP-knaj8-unsplash.jpg" alt="Slide 1" className="w-full h-full object-cover" />
             <div className="glass-effect flex flex-col items-center justify-center">
               <h1 className="text-3xl font-bold mb-2">Level up your dream</h1>
-              <h2 className="text-xl mb-4">Up to 30% discount</h2>
-              <button className="px-4 py-2 bg-customTeal hover:bg-customDeepBlue rounded">Explore Now</button>
+              <h2 className="text-xl mb-4">Up to <span className="text-3xl font-semibold text-red-500  ">30%</span> discount</h2>
+              <button className="px-4 my-4 py-2 btn-sm bg-customTeal hover:bg-customDeepBlue rounded font-semibold">Explore Now</button>
             </div>
           </div>
         </SwiperSlide>
@@ -51,8 +51,8 @@ const BannerSwiper = () => {
             <img src="https://i.ibb.co/QK4cxS9/caleb-maxwell-Vex-Huc-E8a-Zk-unsplash.jpg" alt="Slide 2" className="w-full h-full object-cover" />
             <div className="glass-effect flex flex-col items-center justify-center">
               <h1 className="text-3xl font-bold mb-2">Level up your dream</h1>
-              <h2 className="text-xl mb-4">Up to 30% discount</h2>
-              <button className="px-4 py-2 bg-customTeal hover:bg-customDeepBlue rounded">Explore Now</button>
+              <h2 className="text-xl mb-4">Up to <span className="text-3xl font-semibold text-red-500  ">30%</span> discount</h2>
+              <button className="px-4 my-4 py-2 btn-sm bg-customTeal hover:bg-customDeepBlue rounded font-semibold">Explore Now</button>
             </div>
           </div>
         </SwiperSlide>
@@ -61,8 +61,8 @@ const BannerSwiper = () => {
             <img src="https://i.ibb.co/gwNb5cd/zoltan-tasi-Kl-NNqv-HCgw-unsplash.jpg" alt="Slide 3" className="w-full h-full object-cover" />
             <div className="glass-effect flex flex-col items-center justify-center">
               <h1 className="text-3xl font-bold mb-2">Level up your dream</h1>
-              <h2 className="text-xl mb-4">Up to 30% discount</h2>
-              <button className="px-4 py-2 bg-customTeal hover:bg-customDeepBlue rounded">Explore Now</button>
+              <h2 className="text-xl mb-4">Up to <span className="text-3xl font-semibold text-red-500  ">30%</span> discount</h2>
+              <button className="px-4 my-4 py-2 btn-sm bg-customTeal hover:bg-customDeepBlue rounded font-semibold">Explore Now</button>
             </div>
           </div>
         </SwiperSlide>
@@ -71,8 +71,8 @@ const BannerSwiper = () => {
             <img src="https://i.ibb.co/Kr3NVLt/boudewijn-boer-q-T515-Jd-ZNy8-unsplash.jpg" alt="Slide 4" className="w-full h-full object-cover" />
             <div className="glass-effect flex flex-col items-center justify-center">
               <h1 className="text-3xl font-bold mb-2">Level up your dream</h1>
-              <h2 className="text-xl mb-4">Up to 30% discount</h2>
-              <button className="px-4 py-2 bg-customTeal hover:bg-customDeepBlue rounded">Explore Now</button>
+              <h2 className="text-xl mb-4">Up to <span className="text-3xl font-semibold text-red-500 ">30%</span> discount</h2>
+              <button className="px-4 my-4 py-2 btn-sm bg-customTeal hover:bg-customDeepBlue rounded font-semibold">Explore Now</button>
             </div>
           </div>
         </SwiperSlide>

@@ -27,7 +27,7 @@ const Home = () => {
                 <h1 className="border-2 border-neutral-400 text-neutral-800 w-3"></h1>
             </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-3 md:px-10 lg:px-10 mx-auto">
           {lands.map((land) => (
             <Land key={lands.id} land={land}></Land>
           ))}

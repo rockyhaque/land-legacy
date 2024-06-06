@@ -228,7 +228,7 @@ const Register = () => {
           </button>
           <div className="text-xs flex justify-between items-center mt-5">
             <p className="text-customDeepBlue">Already have an account?</p>
-            <Link to="/login" className="py-2 px-5 bg-white border rounded-xl hover:scale-110 duration-300 hover:bg-[#60a8bc4f] font-medium">Login</Link>
+            <Link to="/login" className="py-2 px-5 text-white bg-customDeepBlue border rounded-xl hover:scale-110 duration-300 hover:bg-[#60a8bc4f] font-medium">Login</Link>
           </div>
         </div>
       </div>

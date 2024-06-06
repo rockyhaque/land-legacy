@@ -46,7 +46,7 @@ const LandDetails = () => {
         <title>Details | {title}</title>
       </Helmet>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto px-3 md:px-10 lg:px-10">
         {/* Details Heading */}
         <div className="text-center space-y-3">
           <h5 className="text-customTeal font-semibold text-xl">Details</h5>
@@ -86,7 +86,7 @@ const LandDetails = () => {
 
             <h2 className="text-3xl font-semibold mt-14">Land Details</h2>
 
-            <div className="flex  justify-center gap-24 text-lg mt-3">
+            <div className="flex flex-col md:flex-row lg:flex-row justify-center gap-6 md:gap-24 lg:gap-24 text-lg mt-3">
               {/* details left side */}
               <div className="border border-gray-300 rounded-2xl p-6 w-full md:w-1/2 lg:w-1/2">
                 <div className="flex justify-between">

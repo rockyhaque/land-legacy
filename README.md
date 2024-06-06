@@ -30,6 +30,7 @@ http://localhost:5173/updateProfile
 <li>react-router-dom</li>
 <li>react-hook-form</li>
 <li>swiper</li>
+<li>react-hot-toast</li>
 </ol>
 
 

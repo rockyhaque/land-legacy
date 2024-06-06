@@ -4,7 +4,7 @@ import { LuNetwork } from "react-icons/lu";
 
 const Speciality = () => {
   return (
-    <div className="bg-[#ddebe5] py-20">
+    <div className="bg-[#ddebe5] py-20 ">
       <div className="text-center space-y-3">
         <h5 className="text-customTeal font-semibold text-xl" data-aos="fade-right">What we do</h5>
         <h2 className="font-semibold text-3xl" data-aos="fade-left">Our Main Speciality</h2>

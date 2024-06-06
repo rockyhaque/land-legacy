@@ -55,7 +55,7 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto my-20 p-6 max-h-[calc(100vh-450px)] bg-white rounded-lg shadow-lg">
+    <div className="max-w-3xl mx-auto my-20 p-6  bg-white rounded-lg shadow-lg">
       <Helmet>
         <title>Update Profile | {user?.displayName}</title>
       </Helmet>
