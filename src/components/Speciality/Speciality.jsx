@@ -6,8 +6,8 @@ const Speciality = () => {
   return (
     <div className="bg-[#ddebe5] py-20">
       <div className="text-center space-y-3">
-        <h5 className="text-customTeal font-semibold text-xl">What we do</h5>
-        <h2 className="font-semibold text-3xl">Our Main Speciality</h2>
+        <h5 className="text-customTeal font-semibold text-xl" data-aos="fade-right">What we do</h5>
+        <h2 className="font-semibold text-3xl" data-aos="fade-left">Our Main Speciality</h2>
         <div className="flex gap-1 justify-center items-center pt-4">
           <h1 className="border-2 border-neutral-400 text-neutral-800 w-3"></h1>
           <h1 className="border-2 border-neutral-900 bg-black w-8"></h1>
@@ -20,7 +20,7 @@ const Speciality = () => {
             <AiOutlineFileSearch className="text-2xl " />
           </div>
           <h3 className="text-xl font-semibold">Transform Your Dreams</h3>
-          <p className="w-5/6 text-gray-700 text-md">
+          <p className="w-5/6 text-gray-700 text-md" data-aos="flip-up">
             Discover seamless solutions for buying, selling, and renting land.
             Empower your land ownership journey with our expert services.
           </p>
@@ -30,7 +30,7 @@ const Speciality = () => {
             <FaLandmark className="text-2xl" />
           </div>
           <h3 className="text-xl font-semibold">Your Land, Your Choice</h3>
-          <p className="w-5/6 text-gray-700 text-md">
+          <p className="w-5/6 text-gray-700 text-md" data-aos="flip-down">
             Explore hassle-free land transactions. Whether buying, selling, or
             renting, our platform ensures a smooth and secure process.
           </p>
@@ -40,7 +40,7 @@ const Speciality = () => {
             <LuNetwork className="text-2xl" />
           </div>
           <h3 className="text-xl font-semibold">Unlock Opportunities</h3>
-          <p className="w-5/6 text-gray-700 text-md">
+          <p className="w-5/6 text-gray-700 text-md" data-aos="flip-left">
             Experience effortless land deals. From purchasing to renting, our
             services cater to all your land ownership needs.
           </p>

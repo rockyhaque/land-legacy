@@ -5,8 +5,10 @@ import Speciality from "../../components/Speciality/Speciality";
 import Land from "../../components/Land/Land";
 import { Helmet } from "react-helmet";
 
+
 const Home = () => {
   const lands = useLoaderData();
+
 
   return (
     <div>
@@ -17,8 +19,8 @@ const Home = () => {
         <title>Land Legacy | Home</title>
       </Helmet>
         <div className="text-center space-y-3 py-16">
-          <h5 className="text-customTeal font-semibold text-xl">Lands For You</h5>
-          <h2 className="font-semibold text-3xl">Choose Your Dream Land</h2>
+          <h5 className="text-customTeal font-semibold text-xl" data-aos="fade-right">Lands For You</h5>
+          <h2 className="font-semibold text-3xl" data-aos="fade-left">Choose Your Dream Land</h2>
           <div className="flex gap-1 justify-center items-center pt-4">
                 <h1 className="border-2 border-neutral-400 text-neutral-800 w-3"></h1>
                 <h1 className="border-2 border-neutral-900 bg-black w-8"></h1>

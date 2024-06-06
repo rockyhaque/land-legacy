@@ -7,13 +7,13 @@ const Service = () => {
     <div className="flex flex-col md:flex-row lg:flex-row py-20 px-10 md:px-2 lg:px-0 gap-10">
       <div className="w-full md:w-1/2 lg:w-1/2">
         <div className="space-y-4">
-          <h6 className="uppercase text-customTeal text-sm font-semibold">
+          <h6 className="uppercase text-customTeal text-sm font-semibold" data-aos="flip-up">
             Let&apos;s take a tour
           </h6>
-          <h1 className="text-3xl font-semibold w-full md:w-4/5 lg:w-4/5">
+          <h1 className="text-3xl font-semibold w-full md:w-4/5 lg:w-4/5" data-aos="ease-in-out-quad">
             Helping People to Find The Right Propert
           </h1>
-          <p className="text-gray-700 text-md">
+          <p className="text-gray-700 text-md" data-aos="zoom-in-left">
             Our platform is dedicated to helping people find the right property,
             whether it&apos;s buying, selling, or renting. Experience seamless
             transactions, expert guidance, and a wide range of options tailored
@@ -27,7 +27,7 @@ const Service = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold">The Perfect Residency</h3>
-              <p className="text-gray-700 mt-2">
+              <p className="text-gray-700 mt-2" data-aos="zoom-in-right">
               Find your ideal land with our curated listings, tailored to match your lifestyle and preferences.
               </p>
             </div>
@@ -38,7 +38,7 @@ const Service = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold">Trusted By Thousands</h3>
-              <p className="text-gray-700 mt-2">
+              <p className="text-gray-700 mt-2" data-aos="zoom-in-right">
               Join a community of satisfied clients who rely on our expertise for their property needs.
               </p>
             </div>
@@ -49,7 +49,7 @@ const Service = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold">Total Payment Trasparency</h3>
-              <p className="text-gray-700 mt-2">
+              <p className="text-gray-700 mt-2" data-aos="zoom-in-right">
               Enjoy complete clarity with every transaction, ensuring trust and confidence in your property dealings
               </p>
             </div>

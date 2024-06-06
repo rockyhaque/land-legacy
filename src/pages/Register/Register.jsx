@@ -6,6 +6,7 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Helmet } from "react-helmet";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
@@ -21,43 +22,48 @@ const Register = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const { email, name, password, photoURL } = data;
 
-    // create user in firebase
-    createUser(email, password)
-      .then((result) => {
-        setUser(result.user);
-        navigate("/");
-      })
-      .catch((error) => {
-        setError(error.message);
+    try {
+      // Create user in Firebase
+      const result = await createUser(email, password);
+
+      // Update user profile
+      await updateProfile(result.user, {
+        displayName: name,
+        photoURL,
       });
+
+      // Set user state
+      setUser(result.user);
+
+      // Navigate to home or another page
+      navigate("/");
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
-  const handleGoogleLogin = () => {
-    googleLogin()
-    .then((result) => {
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await googleLogin();
       setUser(result.user);
       navigate("/");
-    })
-    .catch((error) => {
+    } catch (error) {
       setError(error.message);
-    });
-  }
+    }
+  };
 
-  const handleGithubLogin = () => {
-    githubLogin()
-    .then((result) => {
+  const handleGithubLogin = async () => {
+    try {
+      const result = await githubLogin();
       setUser(result.user);
       navigate("/");
-    })
-    .catch((error) => {
+    } catch (error) {
       setError(error.message);
-    });
-  }
-
-
+    }
+  };
 
   return (
     <section className="bg-gray-100 min-h-[calc(100vh-284px)] flex box-border justify-center items-center">
@@ -70,11 +76,12 @@ const Register = () => {
             className="rounded-2xl max-h-[1600px]"
             src="https://i.ibb.co/WHnDW8Y/aron-yigin-v-Db-I6-Ec-Alo-unsplash.jpg"
             alt="register form image"
+            data-aos="flip-right"
           />
         </div>
         <div className="md:w-1/2 px-8">
-          <h2 className="font-bold text-3xl text-customDeepBlue">Register</h2>
-          <p className="text-sm mt-4 text-customDeepBlue">
+          <h2 className="font-bold text-3xl text-customDeepBlue" data-aos="flip-left">Register</h2>
+          <p className="text-sm mt-4 text-customDeepBlue" data-aos="fade-left">
             Sign Up for a new account
           </p>
           <form
@@ -139,7 +146,6 @@ const Register = () => {
                     pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
                   })}
                 />
-
                 <span
                   className="absolute right-3 cursor-pointer text-xl"
                   onClick={() => setShowPass(!showPass)}
@@ -169,7 +175,6 @@ const Register = () => {
                 </span>
               )}
             </div>
-
             <button
               className="bg-customDeepBlue text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium mt-3"
               type="submit"
@@ -182,8 +187,7 @@ const Register = () => {
               <small className="text-red-500 font-bold">*{error}</small>
             )}
           </div>
-
-          <div className="mt-6  items-center text-gray-100">
+          <div className="mt-6 items-center text-gray-100">
             <hr className="border-gray-300" />
             <p className="text-center text-sm text-gray-500">OR</p>
             <hr className="border-gray-300" />
@@ -205,30 +209,22 @@ const Register = () => {
               />
               <path
                 fill="#4CAF50"
-                d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+                d="M24,44c5.138,0,9.764-1.975,13.293-5.197l-6.022-5.163C28.578,35.954,26.361,37,24,37c-5.192,0-9.598-3.325-11.258-7.953l-6.521,5.023C9.3,39.602,16.057,44,24,44z"
               />
               <path
                 fill="#1976D2"
-                d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                d="M43.611,20.083H42V20H24v8h11.303c-0.74,2.094-2.04,3.908-3.741,5.197c0.001-0.001,0.001-0.001,0.002-0.002l6.022,5.163c-0.427,0.391,6.802-4.966,6.802-14.358C44,22.659,43.862,21.35,43.611,20.083z"
               />
             </svg>
-            Login with Google
+            Continue with Google
           </button>
-          <button onClick={handleGithubLogin} className="bg-white border py-2 w-full rounded-xl mt-3 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
-            <FaGithub className="text-xl mr-3" />
-            <span>Login with Github</span>
+          <button onClick={handleGithubLogin} className="bg-white border py-2 w-full rounded-xl mt-2 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
+            <FaGithub className="mr-3" />
+            Continue with Github
           </button>
-          <div className="mt-10 text-sm border-b border-gray-500 py-1 playfair tooltip">
-            Forget password?
-          </div>
-          <div className="mt-4 text-sm flex justify-between items-center container-mr">
-            <p className="mr-3 md:mr-0 ">Already have an account?</p>
-            <Link
-              to="/login"
-              className="hover:border register text-white bg-customDeepBlue hover:border-gray-400 rounded-xl py-2 px-5 hover:scale-110 hover:bg-[#002c7424] font-semibold duration-300"
-            >
-              Login
-            </Link>
+          <div className="text-xs flex justify-between items-center mt-5">
+            <p className="text-customDeepBlue">Already have an account?</p>
+            <Link to="/login" className="py-2 px-5 bg-white border rounded-xl hover:scale-110 duration-300 hover:bg-[#60a8bc4f] font-medium">Login</Link>
           </div>
         </div>
       </div>

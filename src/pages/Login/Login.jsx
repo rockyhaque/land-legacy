@@ -63,8 +63,8 @@ const Login = () => {
       </Helmet>
       <div className="bg-customSkyBlue rounded-2xl flex max-w-3xl p-5 items-center">
         <div className="md:w-1/2 px-8">
-          <h2 className="font-bold text-3xl text-customDeepBlue">Login</h2>
-          <p className="text-sm mt-4 text-customDeepBlue">
+          <h2 className="font-bold text-3xl text-customDeepBlue" data-aos="fade-left">Login</h2>
+          <p className="text-sm mt-4 text-customDeepBlue" data-aos="fade-right" >
             If you have registerd once then please Login
           </p>
           <form
@@ -201,6 +201,7 @@ const Login = () => {
             className="rounded-2xl max-h-[1600px]"
             src="https://i.ibb.co/4JJXFVn/derek-liang-u-Jfl-Vn6-KG-c-unsplash.jpg"
             alt="register form image"
+            data-aos="flip-right"
           />
         </div>
       </div>

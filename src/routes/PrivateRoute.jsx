@@ -8,10 +8,11 @@ const PrivateRoute = ({children}) => {
     const location = useLocation();
     console.log(location);
     if(loading){
-        <span className="loading loading-bars loading-lg"></span>
+        // return null;
+        return <span className="loading loading-bars loading-lg"></span>;
     }
     if(user){
-        return children
+        return children;
     }
     return <Navigate state={location.pathname} to="/login"></Navigate>;
 };

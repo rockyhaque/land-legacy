@@ -20,27 +20,21 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      {
-        !user && (<li>
-          <NavLink to="/login">Login</NavLink>
-        </li>)
-      }
-      {
-        !user && (<li>
+      {!user && (
+        <li>
           <NavLink to="/register">Register</NavLink>
-        </li>)
-      }
+        </li>
+      )}
       {user && (
         <li>
           <NavLink to="/contact">Contact Us</NavLink>
         </li>
       )}
-      {
-        user && (<li>
+      {user && (
+        <li>
           <NavLink to="/updateProfile">Update Profile</NavLink>
-        </li>)
-      }
-
+        </li>
+      )}
     </>
   );
   return (
@@ -85,10 +79,25 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <>
-            <span>{user.email}</span>
-            <a onClick={handleLogout} className="btn btn-sm">
-              Sign Out
-            </a>
+            
+            <div
+              className="tooltip  tooltip-bottom"
+              data-tip={user.displayName}
+            >
+              <div className="avatar">
+                <div className="w-10 rounded-full ring ring-customTeal ring-offset-base-100 ring-offset-2">
+                  <img src={user.photoURL} />
+                </div>
+              </div>
+            </div>
+            <div className="ml-3">
+              <a
+                onClick={handleLogout}
+                className="btn btn-sm btn-error text-white"
+              >
+                Sign Out
+              </a>
+            </div>
           </>
         ) : (
           <Link to="/login">
