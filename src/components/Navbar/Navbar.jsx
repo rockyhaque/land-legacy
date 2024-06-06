@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useContext } from "react";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -9,6 +10,7 @@ const Navbar = () => {
     logout()
       .then(() => {
         console.log("User Logged Out");
+        toast.success(`User Logged Out Successfully 🤩`)
       })
       .catch((error) => {
         console.error(error);
@@ -65,12 +67,21 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex justify-center items-center">
-          <img
-            className="w-10"
-            src="https://i.ibb.co/mTt7Cbm/landscape.png"
-            alt=""
-          />
-          <a className="btn btn-ghost text-xl">Land Legacy</a>
+          <div>
+            <img
+              className="w-10"
+              src="https://i.ibb.co/mTt7Cbm/landscape.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <Link
+              to="/"
+              className="btn btn-ghost text-xl hidden md:block lg:block pt-2"
+            >
+              Land Legacy
+            </Link>
+          </div>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -79,13 +90,12 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <>
-            
             <div
               className="tooltip  tooltip-bottom"
               data-tip={user.displayName}
             >
-              <div className="avatar">
-                <div className="w-10 rounded-full ring ring-customTeal ring-offset-base-100 ring-offset-2">
+              <div className="avatar online">
+                <div className="w-10 rounded-full ring ring-customTeal ring-offset-base-100 ring-offset-0">
                   <img src={user.photoURL} />
                 </div>
               </div>

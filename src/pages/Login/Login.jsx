@@ -6,6 +6,7 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Helmet } from "react-helmet";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
@@ -31,6 +32,7 @@ const Login = () => {
       })
       .catch((error) => {
         setError(error.message);
+        toast.error(`Opps! ${error.message}`)
       });
   };
 
@@ -42,6 +44,7 @@ const Login = () => {
       })
       .catch((error) => {
         setError(error.message);
+        toast.error(`Opps! ${error.message}`)
       });
   };
 
@@ -53,6 +56,7 @@ const Login = () => {
     })
     .catch((error) => {
       setError(error.message);
+      toast.error(`Opps! ${error.message}`)
     });
   }
 

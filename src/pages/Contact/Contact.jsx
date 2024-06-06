@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 
 const Contact = () => {
   return (
-    <div className="pt-10">
+    <div className="pt-16 bg-neutral-50">
         <Helmet>
         <title>Land Legacy | Contact Us</title>
       </Helmet>
@@ -18,7 +18,7 @@ const Contact = () => {
           <h1 className="border-2 border-neutral-400  w-3"></h1>
         </div>
       </div>
-      <div className="flex gap-8 bg-neutral-50 py-8">
+      <div className="flex gap-8 bg-neutral-50 py-12">
         <div className="w-1/3 shadow-xl bg-customWhite rounded-lg">
           <div className="card bg-base-100 flex justify-center items-center py-6">
             <div>

@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Helmet } from "react-helmet";
 import { updateProfile } from "firebase/auth";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
@@ -40,6 +41,7 @@ const Register = () => {
 
       // Navigate to home or another page
       navigate("/");
+      toast.success(`Yay! User Created Successfully 🤩`)
     } catch (error) {
       setError(error.message);
     }
@@ -49,6 +51,7 @@ const Register = () => {
     try {
       const result = await googleLogin();
       setUser(result.user);
+      toast.success(`Yay! User Created Successfully 🤩`)
       navigate("/");
     } catch (error) {
       setError(error.message);
@@ -59,6 +62,7 @@ const Register = () => {
     try {
       const result = await githubLogin();
       setUser(result.user);
+      toast.success(`Yay! User Created Successfully 🤩`)
       navigate("/");
     } catch (error) {
       setError(error.message);

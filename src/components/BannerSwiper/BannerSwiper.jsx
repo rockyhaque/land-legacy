@@ -42,7 +42,7 @@ const BannerSwiper = () => {
             <div className="glass-effect flex flex-col items-center justify-center">
               <h1 className="text-3xl font-bold mb-2">Level up your dream</h1>
               <h2 className="text-xl mb-4">Up to 30% discount</h2>
-              <button className="px-4 py-2 bg-blue-500 hover:bg-blue-700 rounded">Explore Now</button>
+              <button className="px-4 py-2 bg-customTeal hover:bg-customDeepBlue rounded">Explore Now</button>
             </div>
           </div>
         </SwiperSlide>
@@ -52,7 +52,7 @@ const BannerSwiper = () => {
             <div className="glass-effect flex flex-col items-center justify-center">
               <h1 className="text-3xl font-bold mb-2">Level up your dream</h1>
               <h2 className="text-xl mb-4">Up to 30% discount</h2>
-              <button className="px-4 py-2 bg-blue-500 hover:bg-blue-700 rounded">Explore Now</button>
+              <button className="px-4 py-2 bg-customTeal hover:bg-customDeepBlue rounded">Explore Now</button>
             </div>
           </div>
         </SwiperSlide>
@@ -62,7 +62,7 @@ const BannerSwiper = () => {
             <div className="glass-effect flex flex-col items-center justify-center">
               <h1 className="text-3xl font-bold mb-2">Level up your dream</h1>
               <h2 className="text-xl mb-4">Up to 30% discount</h2>
-              <button className="px-4 py-2 bg-blue-500 hover:bg-blue-700 rounded">Explore Now</button>
+              <button className="px-4 py-2 bg-customTeal hover:bg-customDeepBlue rounded">Explore Now</button>
             </div>
           </div>
         </SwiperSlide>
@@ -72,7 +72,7 @@ const BannerSwiper = () => {
             <div className="glass-effect flex flex-col items-center justify-center">
               <h1 className="text-3xl font-bold mb-2">Level up your dream</h1>
               <h2 className="text-xl mb-4">Up to 30% discount</h2>
-              <button className="px-4 py-2 bg-blue-500 hover:bg-blue-700 rounded">Explore Now</button>
+              <button className="px-4 py-2 bg-customTeal hover:bg-customDeepBlue rounded">Explore Now</button>
             </div>
           </div>
         </SwiperSlide>
