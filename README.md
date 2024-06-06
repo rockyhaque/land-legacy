@@ -4,7 +4,7 @@ Welcome to Land Legacy, your premier destination for agricultural, ranches, vine
 
 ### Live Site URL
 
-http://localhost:5173/updateProfile
+https://land-legacy.web.app
 
 ### Features and Characteristics
 
