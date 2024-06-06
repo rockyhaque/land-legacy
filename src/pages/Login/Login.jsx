@@ -28,6 +28,7 @@ const Login = () => {
     loginUser(email, password)
       .then((result) => {
         setUser(result.user);
+        toast.success(`User Log In Successfully 🤩`)
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
